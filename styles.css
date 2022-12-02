@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400&display=swap");
+
+:root {
+  --main-color: #20E8C6;
+  --white-main: #eeeeee;
+  --main-shadow: #2c333d;
+  --bg-color: #244c45;
+  --secondary-color: #E85920;
+  --light-secondary-color: #f5733f;
+  --navy-black: #090816;
+
+}
+
+/* font-family: 'Abril Fatface', cursive;
+font-family: 'Poppins', sans-serif; */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+.header-container {
+  margin: auto;
+  text-align: center; 
+}
+
+/* Body */
+.body-container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+h1 {
+  margin: 30px;
+  font-family: 'Abril Fatface', cursive;
+  text-shadow: 5px 0 var(--main-shadow);
+  font-size: 8rem;
+  color: var(--main-color);
+}
+
+p {
+  font-size: 2rem;
+  color: var(--white-main);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+img {
+  width: 80%;
+}
+
+/* button */
+.play-btn {
+  margin-top: 24px;
+  padding: 12px 20px;
+  background-color: var(--secondary-color);
+  color: var(--white-main);
+  border: none;
+  filter: drop-shadow(4px 4px 0 var(--navy-black));
+ 
+  /* border: 5px var(--navy-black) solid; */
+}
+
+.play-btn:hover {
+  scale: 0.98;
+  background-color: var(--light-secondary-color);
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  margin-top: 6rem;
+  color: var(--white-main);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+footer p {
+  font-size: 0.7rem;
+}
