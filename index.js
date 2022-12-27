@@ -6,6 +6,7 @@ const playerDiceImg = document.querySelector("#player-pick img");
 const startModal = document.querySelector(".start-modal");
 const startGameBtn = document.querySelector(".start-game-btn");
 const moreInfoBtn = document.querySelector(".more-info_btn");
+const diceImage = document.querySelector(".dice");
 
 const playButton = document.createElement("button");
 playButton.classList.add("play-btn");
@@ -27,6 +28,7 @@ startGameBtn.addEventListener("click", () => {
 });
 
 gameIsRunning = false;
+let clicks = 0;
 
 let playerNumVal = 0;
 let compNumVal = 0;
@@ -113,12 +115,17 @@ const startGame = () => {
 
 playButton.addEventListener("click", startGame);
 
-/* Code that stops a game after three clicks */
-// let clicks = 0;
-// document.body.onclick = function() {
-//   clicks++;
-//   if (clicks >= 3) {
-//     alert('Game over!');
-//     document.body.onclick = null;
-//   }
-// };
+// End game after three button clicks
+playButton.onclick = function () {
+  clicks++;
+  if (clicks >= 3) {
+    // winnerModal();
+    playButton.onclick = null;
+  }
+};
+
+// Pop up modal with winner results
+const winnerModal = () => {
+  const winnerNode = document.createElement("h2");
+  winnerNode.textContent = getWinner(playerNumVal, compNumVal);
+};
