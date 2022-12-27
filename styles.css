@@ -1,18 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400&display=swap");
 
 :root {
-  --main-color: #20E8C6;
+  --main-color: #20e8c6;
   --white-main: #eeeeee;
   --main-shadow: #2c333d;
   --bg-color: #244c45;
-  --secondary-color: #E85920;
+  --bg-color-light: #3f7d72;
+  --secondary-color: #e85920;
   --light-secondary-color: #f5733f;
   --navy-black: #090816;
-
 }
-
-/* font-family: 'Abril Fatface', cursive;
-font-family: 'Poppins', sans-serif; */
 
 * {
   box-sizing: border-box;
@@ -23,7 +20,53 @@ font-family: 'Poppins', sans-serif; */
 /* Header */
 .header-container {
   margin: auto;
-  text-align: center; 
+  text-align: center;
+}
+
+/* Modals */
+.start-modal {
+  position: fixed;
+  z-index: 3;
+  left: 30%;
+  top: 34%;
+  padding: 20px 30px;
+  width: 600px;
+  height: 300px;
+  background: var(--white-main);
+  filter: drop-shadow(4px 4px 0 var(--navy-black));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.start-modal h2 {
+  font-size: 2.1rem;
+  margin-bottom: 30px;
+  color: var(--navy-black);
+}
+
+.start-modal .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  margin-top: 24px;
+  padding: 12px 20px;
+  background-color: var(--bg-color-light);
+  color: var(--white-main);
+  border: none;
+  filter: drop-shadow(4px 4px 0 var(--navy-black));
+}
+
+.btn:hover {
+  scale: 0.98;
+  opacity: 0.89;
+  background-color: var(--bg-color-light);
+  cursor: pointer;
 }
 
 /* Body */
@@ -31,6 +74,10 @@ font-family: 'Poppins', sans-serif; */
   width: 70%;
   margin: auto;
   text-align: center;
+}
+
+.active {
+  filter: blur(10px) brightness(0.7);
 }
 
 .dice {
@@ -44,7 +91,7 @@ body {
 
 h1 {
   margin: 30px;
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
   text-shadow: 5px 0 var(--main-shadow);
   font-size: 8rem;
   color: var(--main-color);
@@ -53,7 +100,7 @@ h1 {
 p {
   font-size: 2rem;
   color: var(--white-main);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
 
@@ -69,7 +116,7 @@ img {
   color: var(--white-main);
   border: none;
   filter: drop-shadow(4px 4px 0 var(--navy-black));
- 
+
   /* border: 5px var(--navy-black) solid; */
 }
 
@@ -84,7 +131,7 @@ footer {
   margin-top: 6rem;
   color: var(--white-main);
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
 
